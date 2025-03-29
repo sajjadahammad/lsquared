@@ -9,9 +9,11 @@ import {
 import { Calendar1, ClipboardList, Ellipsis, Filter, MessagesSquare, Plus, Search, Star } from "lucide-react"
 import NewEvent from "@/components/NewEvent"
 import AllScheduled from "@/components/AllScheduled"
+import { CalendarProvider } from "@/context/CalendarProvider"
 
 export default function Calendar() {
     return (
+        <CalendarProvider>
         <div>
             <h1 className='text-3xl'>Calendar</h1>
             <p className='text-sm text-zinc-600'>Stay Organized and On Track with Your Personalized Calendar</p>
@@ -41,5 +43,6 @@ export default function Calendar() {
                 <TabsContent value="taskreminders">Taskreminders</TabsContent>
             </Tabs>
         </div>
+        </CalendarProvider>
     )
 }
