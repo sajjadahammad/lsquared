@@ -33,7 +33,7 @@ export default function Calendar() {
                                     key={index}
                                     className="flex -mr-3 first:ml-0"
                                     style={{ zIndex: 5 - index }} >
-                                    <Avatar className="w-12 h-12 border-2 border-white" style={{ backgroundColor: avatar.backgroundColor }}>
+                                    <Avatar className="size-10 border-2 border-white" style={{ backgroundColor: avatar.backgroundColor }}>
                                         {avatar.image ? (
                                             <AvatarImage src={avatar.image} alt={`Avatar ${index + 1}`} />
                                         ) : null}

@@ -86,7 +86,7 @@ export default function AllScheduled() {
       initialDate: "2024-06-24",
       headerToolbar: false,
       slotMinTime: "08:00:00",
-      slotMaxTime: "14:00:00",
+      slotMaxTime: "18:00:00",
       allDaySlot: false,
       height: "auto",
       slotLabelFormat: {
@@ -112,7 +112,7 @@ export default function AllScheduled() {
       eventResize: handleEventResize, 
       eventContent: (eventInfo) => {
         return (
-          <div className="p-1 text-xs overflow-hidden min-h-32 h-full">
+          <div className="p-1 text-xs overflow-hidden  h-full">
             <div className="font-medium border-b border-dashed">{format(new Date(eventInfo.event.start), "h:mm a")}</div>
             <div className="font-medium">{eventInfo.event.title}</div>
           </div>

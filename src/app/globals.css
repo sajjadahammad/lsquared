@@ -123,6 +123,12 @@
 }
 
 
+
+.fc-timegrid-event-harness.fc-timegrid-event-harness-inset{
+  @apply min-h-24
+}
+
+
 .fc .fc-toolbar {
   @apply mb-4 flex flex-wrap justify-between items-center;
 }
