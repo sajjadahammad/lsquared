@@ -128,7 +128,7 @@ export function CalendarProvider({ children }) {
       textColor: "#166534",
     },
 
-    // Saturday events
+
     {
       id: "14",
       title: "Planning & Goal Setting for the Week",
@@ -139,7 +139,6 @@ export function CalendarProvider({ children }) {
       textColor: "#581c87",
     },
 
-    // Sunday events
     {
       id: "15",
       title: "Meetup with Adobe internal team",
@@ -155,7 +154,7 @@ export function CalendarProvider({ children }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalMode, setModalMode] = useState("create")
 
-  // Event categories with their colors
+
   const eventCategories = [
     {
       id: "design",
