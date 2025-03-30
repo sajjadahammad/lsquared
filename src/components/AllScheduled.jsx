@@ -33,7 +33,7 @@ export const NewEvent =() =>{
 
 export default function AllScheduled() {
     const calendarRef = useRef(null)
-    const [currentDate, setCurrentDate] = useState(new Date(2024, 5, 24)) // June 24, 2024
+    const [currentDate, setCurrentDate] = useState(new Date())
     const [view, setView] = useState("timeGridWeek")
   
     const { events, openCreateModal, openEditModal, handleEventDrop, handleEventResize, isModalOpen } = useCalendar()
@@ -72,7 +72,7 @@ export default function AllScheduled() {
         startDate.setDate(startDate.getDate() - startDate.getDay() + 1)
         const endDate = new Date(startDate)
         endDate.setDate(endDate.getDate() + 6) 
-        return `${format(startDate, "d")} Jun - ${format(endDate, "d")} Jun 2024`
+        return `${format(startDate, "d MMM")} - ${format(endDate, "d MMM yyyy")}`
       } else if (view === "dayGridMonth") {
         return format(currentDate, "MMMM yyyy")
       } else {
@@ -83,7 +83,7 @@ export default function AllScheduled() {
     const calendarOptions = {
       plugins: [timeGridPlugin, dayGridPlugin, interactionPlugin],
       initialView: "timeGridWeek",
-      initialDate: "2024-06-24",
+      initialDate: format(new Date(), "yyyy-MM-dd"),
       headerToolbar: false,
       slotMinTime: "08:00:00",
       slotMaxTime: "18:00:00",
@@ -125,7 +125,7 @@ export default function AllScheduled() {
         <div className="bg-white rounded-lg shadow">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 border-b">
           <div className="flex items-center justify-between gap-4 mb-4 md:mb-0 w-full md:w-fit">
-            <h2 className="text-2xl font-semibold">June 2024</h2>
+            <h2 className="text-2xl font-medium">{format(new Date(), " MMMM yyyy")}</h2>
             <Button variant="outline" size="sm" onClick={handleToday} className="h-8 rounded-sm">
               Today
             </Button>

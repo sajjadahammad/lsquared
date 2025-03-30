@@ -6,12 +6,11 @@ const CalendarContext = createContext()
 
 export function CalendarProvider({ children }) {
   const [events, setEvents] = useState([
-
     {
       id: "1",
       title: "Client Presentation Preparation",
-      start: "2024-06-25T08:00:00",
-      end: "2024-06-25T09:00:00",
+      start: "2025-03-31T08:00:00",
+      end: "2025-03-31T09:00:00",
       backgroundColor: "#e9d5ff",
       borderColor: "#d8b4fe",
       textColor: "#581c87",
@@ -19,8 +18,8 @@ export function CalendarProvider({ children }) {
     {
       id: "2",
       title: "Client Meeting Planning",
-      start: "2024-06-24T09:00:00",
-      end: "2024-06-24T10:30:00",
+      start: "2025-03-30T09:00:00",
+      end: "2025-03-30T10:30:00",
       backgroundColor: "#dbeafe",
       borderColor: "#bfdbfe",
       textColor: "#1e40af",
@@ -28,18 +27,17 @@ export function CalendarProvider({ children }) {
     {
       id: "3",
       title: "Meetup with UI8 internal Team",
-      start: "2024-06-24T11:00:00",
-      end: "2024-06-24T12:00:00",
+      start: "2025-03-30T11:00:00",
+      end: "2025-03-30T12:00:00",
       backgroundColor: "#dcfce7",
       borderColor: "#bbf7d0",
       textColor: "#166534",
     },
-
     {
       id: "4",
       title: "Design Revisions",
-      start: "2024-06-25T09:00:00",
-      end: "2024-06-25T10:00:00",
+      start: "2025-03-31T09:00:00",
+      end: "2025-03-31T10:00:00",
       backgroundColor: "#e9d5ff",
       borderColor: "#d8b4fe",
       textColor: "#581c87",
@@ -47,18 +45,17 @@ export function CalendarProvider({ children }) {
     {
       id: "5",
       title: "Client Feedback Meeting",
-      start: "2024-06-25T11:00:00",
-      end: "2024-06-25T12:30:00",
+      start: "2025-03-31T11:00:00",
+      end: "2025-03-31T12:30:00",
       backgroundColor: "#dbeafe",
       borderColor: "#bfdbfe",
       textColor: "#1e40af",
     },
-
     {
       id: "6",
       title: "New Project Kickoff Meeting",
-      start: "2024-06-26T08:00:00",
-      end: "2024-06-26T09:00:00",
+      start: "2025-04-01T08:00:00",
+      end: "2025-04-01T09:00:00",
       backgroundColor: "#dbeafe",
       borderColor: "#bfdbfe",
       textColor: "#1e40af",
@@ -66,8 +63,8 @@ export function CalendarProvider({ children }) {
     {
       id: "7",
       title: "Collaboration with Development Team",
-      start: "2024-06-26T10:00:00",
-      end: "2024-06-26T11:00:00",
+      start: "2025-04-01T10:00:00",
+      end: "2025-04-01T11:00:00",
       backgroundColor: "#e9d5ff",
       borderColor: "#d8b4fe",
       textColor: "#581c87",
@@ -75,8 +72,8 @@ export function CalendarProvider({ children }) {
     {
       id: "8",
       title: "Meetup with Gojek internal team",
-      start: "2024-06-26T12:00:00",
-      end: "2024-06-26T13:00:00",
+      start: "2025-04-01T12:00:00",
+      end: "2025-04-01T13:00:00",
       backgroundColor: "#dcfce7",
       borderColor: "#bbf7d0",
       textColor: "#166534",
@@ -84,8 +81,8 @@ export function CalendarProvider({ children }) {
     {
       id: "9",
       title: "Client Meeting Progress report",
-      start: "2024-06-27T12:00:00",
-      end: "2024-06-27T13:30:00",
+      start: "2025-04-02T12:00:00",
+      end: "2025-04-02T13:30:00",
       backgroundColor: "#dbeafe",
       borderColor: "#bfdbfe",
       textColor: "#1e40af",
@@ -93,18 +90,17 @@ export function CalendarProvider({ children }) {
     {
       id: "10",
       title: "Design Refinement",
-      start: "2024-06-27T09:00:00",
-      end: "2024-06-27T10:00:00",
+      start: "2025-04-02T09:00:00",
+      end: "2025-04-02T10:00:00",
       backgroundColor: "#e9d5ff",
       borderColor: "#d8b4fe",
       textColor: "#581c87",
     },
-
     {
       id: "11",
       title: "Design Team Stand-up Meeting",
-      start: "2024-06-28T08:30:00",
-      end: "2024-06-28T10:00:00",
+      start: "2025-04-03T08:30:00",
+      end: "2025-04-03T10:00:00",
       backgroundColor: "#dbeafe",
       borderColor: "#bfdbfe",
       textColor: "#1e40af",
@@ -112,8 +108,8 @@ export function CalendarProvider({ children }) {
     {
       id: "12",
       title: "Final Touches on Client Project",
-      start: "2024-06-28T09:00:00",
-      end: "2024-06-28T10:00:00",
+      start: "2025-04-03T09:00:00",
+      end: "2025-04-03T10:00:00",
       backgroundColor: "#e9d5ff",
       borderColor: "#d8b4fe",
       textColor: "#581c87",
@@ -121,34 +117,32 @@ export function CalendarProvider({ children }) {
     {
       id: "13",
       title: "Industry Webinar/Workshop",
-      start: "2024-06-28T11:00:00",
-      end: "2024-06-28T12:00:00",
+      start: "2025-04-03T11:00:00",
+      end: "2025-04-03T12:00:00",
       backgroundColor: "#dcfce7",
       borderColor: "#bbf7d0",
       textColor: "#166534",
     },
-
-
     {
       id: "14",
       title: "Planning & Goal Setting for the Week",
-      start: "2024-06-29T09:00:00",
-      end: "2024-06-29T10:00:00",
+      start: "2025-04-04T09:00:00",
+      end: "2025-04-04T10:00:00",
       backgroundColor: "#e9d5ff",
       borderColor: "#d8b4fe",
       textColor: "#581c87",
     },
-
     {
       id: "15",
       title: "Meetup with Adobe internal team",
-      start: "2024-06-30T10:00:00",
-      end: "2024-06-30T11:00:00",
+      start: "2025-04-05T10:00:00",
+      end: "2025-04-05T11:00:00",
       backgroundColor: "#dcfce7",
       borderColor: "#bbf7d0",
       textColor: "#166534",
     },
   ])
+  
 
   const [selectedEvent, setSelectedEvent] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
