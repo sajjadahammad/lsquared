@@ -9,6 +9,9 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Calendar1, ClipboardList, Ellipsis, Filter, MessagesSquare, Plus, Search, Star, UserPlus } from "lucide-react"
 import AllScheduled, { NewEvent } from "@/components/AllScheduled"
 import { CalendarProvider } from "@/context/CalendarProvider"
+import Events from "@/components/Events";
+import Meetings from "@/components/Meetings";
+import Reminders from "@/components/Reminders";
 
 export default function Calendar() {
     const avatars = [
@@ -48,12 +51,14 @@ export default function Calendar() {
                 </div>
                 <Tabs defaultValue="scheduled" >
                     <div className="flex flex-col lg:flex-row items-center justify-between mb-4 border-b overflow-hidden ">
-                        <TabsList className='overflow-x-auto'>
-                            <TabsTrigger value="scheduled"><Calendar1 /> All Scheduled</TabsTrigger>
-                            <TabsTrigger value="events"><Star /> Events</TabsTrigger>
-                            <TabsTrigger value="meetings"><MessagesSquare />Meetings</TabsTrigger>
-                            <TabsTrigger value="taskreminders"><ClipboardList />Task Reminders</TabsTrigger>
-                        </TabsList>
+                    <div className="w-full lg:w-auto overflow-x-auto pb-2"> 
+            <TabsList className="w-max"> 
+                <TabsTrigger value="scheduled"><Calendar1 /> All Scheduled</TabsTrigger>
+                <TabsTrigger value="events"><Star /> Events</TabsTrigger>
+                <TabsTrigger value="meetings"><MessagesSquare />Meetings</TabsTrigger>
+                <TabsTrigger value="taskreminders"><ClipboardList />Task Reminders</TabsTrigger>
+            </TabsList>
+        </div>
                         <div className="flex items-center gap-2 pb-5 ml-auto">
                             <div className="relative w-24">
                                 <Search size={12} className="absolute left-2 top-1/2 transform -translate-y-1/2" />
@@ -67,9 +72,15 @@ export default function Calendar() {
                     <TabsContent value="scheduled">
                         <AllScheduled />
                     </TabsContent>
-                    <TabsContent value="events">Change your password here.</TabsContent>
-                    <TabsContent value="meetings">Meetings</TabsContent>
-                    <TabsContent value="taskreminders">Taskreminders</TabsContent>
+                    <TabsContent value="events">
+                        <Events/>
+                    </TabsContent>
+                    <TabsContent value="meetings">
+                        <Meetings/>
+                    </TabsContent>
+                    <TabsContent value="taskreminders">
+                        <Reminders/>
+                    </TabsContent>
                 </Tabs>
             </div>
         </CalendarProvider>

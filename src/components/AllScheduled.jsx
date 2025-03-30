@@ -113,8 +113,8 @@ export default function AllScheduled() {
       eventContent: (eventInfo) => {
         return (
           <div className="p-1 text-xs overflow-hidden  h-full">
-            <div className="font-medium border-b border-dashed">{format(new Date(eventInfo.event.start), "h:mm a")}</div>
-            <div className="font-medium">{eventInfo.event.title}</div>
+            <div className="font-medium border-b-2 pb-1 border-dashed " style={{ borderColor: eventInfo.event.borderColor }}>{format(new Date(eventInfo.event.start), "h:mm a")}</div>
+            <div className="font-medium pt-1">{eventInfo.event.title}</div>
           </div>
         )
       },
@@ -124,14 +124,14 @@ export default function AllScheduled() {
       return (
         <div className="bg-white rounded-lg shadow">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 border-b">
-          <div className="flex items-center gap-4 mb-4 md:mb-0">
+          <div className="flex items-center justify-between gap-4 mb-4 md:mb-0 w-full md:w-fit">
             <h2 className="text-2xl font-semibold">June 2024</h2>
             <Button variant="outline" size="sm" onClick={handleToday} className="h-8 rounded-sm">
               Today
             </Button>
           </div>
   
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-between gap-4 w-full md:w-fit">
             <div className="flex items-center border rounded-md overflow-hidden">
               <Button
                 variant="ghost"
