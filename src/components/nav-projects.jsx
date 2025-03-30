@@ -1,6 +1,6 @@
 "use client"
 
-import { Folder, Forward, MoreHorizontal, Trash2 } from "lucide-react";
+import { ChevronRight, Folder, Forward, MoreHorizontal, Trash2 } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -18,6 +18,11 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 
 export function NavProjects({
   projects
@@ -25,11 +30,18 @@ export function NavProjects({
   const { isMobile } = useSidebar()
 
   return (
+    <Collapsible asChild defaultOpen={'true'} className="group/collapsible">
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>MY PAGES</SidebarGroupLabel>
+    <CollapsibleTrigger>
+      <div className="flex">
+        <SidebarGroupLabel>MY PAGES</SidebarGroupLabel>
+        <ChevronRight className="ml-auto transition-transform  self-center duration-200 group-data-[state=open]/collapsible:rotate-90 size-4" />
+      </div>
+    </CollapsibleTrigger>
+    <CollapsibleContent>
       <SidebarMenu>
         {projects.map((item) => (
-          <SidebarMenuItem key={item.name}>
+          <SidebarMenuItem key={item.name} className='space-y-4'>
             <SidebarMenuButton asChild>
               <a href={item.url}>
                 <item.icon />
@@ -65,6 +77,8 @@ export function NavProjects({
           </SidebarMenuItem>
         ))}
       </SidebarMenu>
+      </CollapsibleContent>
     </SidebarGroup>
+    </Collapsible>
   );
 }

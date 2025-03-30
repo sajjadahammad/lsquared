@@ -29,7 +29,7 @@ import {
 
 // This is sample data.
 const data = {
-  
+
   teams: [
     {
       name: "Manageko",
@@ -62,30 +62,42 @@ const data = {
       title: "Calendar",
       url: "/calendar",
       icon: Calendar1,
-    
+
     },
     {
       title: "Settings",
       url: "#",
       icon: Bolt,
-     
+
     },
   ],
   projects: [
     {
       name: "CrafBoard Project",
       url: "#",
-      icon: Frame,
+      icon: () => (
+        <div className='bg-gradient-to-r from-purple-500 to-purple-400 shadow text-white p-1 rounded'>
+          <Frame className="size-4"/> 
+        </div>
+      ),
     },
     {
       name: "Cudemo Project",
       url: "#",
-      icon: PieChart,
+      icon: ()=>(
+        <div className='bg-gradient-to-r from-violet-700 to-violet-400 shadow text-white p-1 rounded'>
+          <PieChart className="size-4"/>
+        </div>
+      ),
     },
     {
       name: "Angular Studio",
-      url: "#",
-      icon: Map,
+      url: "#" ,
+      icon: ()=>(
+        <div className='bg-gradient-to-r from-blue-700 to-blue-400 shadow text-white p-1 rounded'>
+        <Map className="size-4"/>
+        </div>
+      ),
     },
     {
       name: "Create New",

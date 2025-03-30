@@ -13,9 +13,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -24,8 +21,16 @@ export function NavMain({items}) {
 
   const pathname = usePathname()
   return (
+    <Collapsible asChild defaultOpen={'true'} className="group/collapsible">
     <SidebarGroup>
-      <SidebarGroupLabel>MAIN MENU</SidebarGroupLabel>
+    <CollapsibleTrigger>
+      <div className="flex">
+        <SidebarGroupLabel>MAIN MENU</SidebarGroupLabel>
+        <ChevronRight className="ml-auto transition-transform  self-center duration-200 group-data-[state=open]/collapsible:rotate-90 size-4" />
+      </div>
+
+      </CollapsibleTrigger>
+      <CollapsibleContent>
       <SidebarMenu>
         {items.map((item,idx) => (
 
@@ -40,6 +45,8 @@ export function NavMain({items}) {
             </Link>
         ))}
       </SidebarMenu>
+      </CollapsibleContent>
     </SidebarGroup>
+    </Collapsible>
   );
 }
