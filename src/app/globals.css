@@ -218,7 +218,6 @@
   @apply h-16 text-gray-500 text-xs uppercase align-middle; 
 }
 
-
 .fc-list-day-cushion {
   @apply bg-blue-50;
 }
@@ -229,6 +228,10 @@
 
 .fc-daygrid-day-events{
   @apply min-h-32
+}
+
+.fc-daygrid-event{
+  @apply whitespace-normal !important
 }
 
 .fc .fc-day-today {
